@@ -67,6 +67,7 @@ contract Token {
 	returns (bool success)
 
 	{
+				
 		require(_spender != address(0));
 		
 		allowance[msg.sender][_spender] = _value;
@@ -86,6 +87,7 @@ contract Token {
 	returns (bool success)
 	
 	{
+
 		require(_value <= allowance[_from][msg.sender]);
 		require(_value <= balanceOf[_from]);
 
